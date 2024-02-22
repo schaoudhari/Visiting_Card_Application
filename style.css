@@ -1,0 +1,184 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        /* border: 1px solid black; */
+        height: 100vh;
+        display: block;
+    }
+
+    .heading {
+        text-align: center;
+        border: 1px solid black;
+        margin: 15px 0;
+        background: linear-gradient(to right, red, blue, purple, black, darkviolet);
+        color: #fff;
+
+    }
+
+    .heading h2 {
+        font-size: 35px;
+        font-weight: bold;
+        font-style: italic;
+        /* font-variant: ; */
+    }
+
+    .input {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: auto;
+        /* display: flex; */
+    }
+
+    .input .data {
+        padding: 0 30px;
+        margin-top: 10px;
+        /* width: 50%; */
+    }
+
+    .input .data table tr td input {
+        width: 220%;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #btnSub {
+        margin-top: 10px;
+        padding: 3px 8px;
+    }
+
+    .display {
+        margin-top: 10px;
+        padding: 0 60px;
+    }
+
+    #cardDisplay {
+        width: auto;
+        height: auto;
+        border: 1px solid black;
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color: brown;
+        color: #fff;
+        font-size: 18px;
+        filter: drop-shadow(5px 2px 4px black);
+    }
+
+    .headrow {
+        width: auto;
+        height: 40px;
+        padding: 2px 15px;
+    }
+
+    #CardHolderName {
+        text-align: start;
+    }
+
+    #CardHolderNumber {
+        text-align: end;
+    }
+
+    .Middlerow {
+        width: auto;
+        height: 50px;
+        text-align: center;
+        align-items: center;
+        padding: 0px 45px;
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .Addressrow {
+        width: auto;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        padding: 0px 45px;
+        font-size: 12px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .lastrow {
+        width: auto;
+        margin-top: 20px;
+        height: 40px;
+        padding: 2px 15px;
+    }
+
+    #web-site {
+        text-align: end;
+    }
+
+    #email-id {
+        text-align: start;
+    }
+
+    #btnprin {
+        margin-top: 10px;
+        padding: 3px 8px;
+        float: right;
+    }
+
+    #colorList {
+        margin-top: 10px;
+        border-radius: 13px;
+        padding: 3px 6px;
+    }
+
+    #colorList:hover {
+        background-color: rgb(21, 54, 54);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #textColorList {
+        margin-top: 10px;
+        border-radius: 13px;
+        padding: 3px 6px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .input .data table tr td input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .display {
+            margin-top: 10px;
+        }
+
+        #cardDisplay {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .headrow,
+        .Middlerow,
+        .Addressrow,
+        .lastrow {
+            padding: 0 15px;
+        }
+
+        .headrow {
+            display: inline-block;
+            margin-left: 115px;
+        }
+
+        .lastrow {
+            display: inline-block;
+            margin-left: 100px;
+        }
+
+        #btnprin {
+            float: none;
+            margin-top: 10px;
+            padding: 3px 8px;
+            width: 100%;
+        }
+    }

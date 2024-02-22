@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <section class="container">
+        <div class="heading">
+            <h2>Visiting card Application</h2>
+        </div>
+
+        <div class="input">
+            <div class="row">
+                <div class="col-md-6 data">
+                    <table>
+                        <tr>
+                            <td><input type="text" placeholder="Enter Your Name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Enter Your Company Name" id="companyname"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" placeholder="abcd@gmail.com" name="" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Enter Company Address" id="address"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Enter Your Website" id="Websitename"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Mobile Number" id="mob"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="date" id="dob"></td>
+                        </tr>
+                        <tr>
+                            <td><button id="btnSub" onclick="checkEmptyFiels()">Submit</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6 display">
+                    <div id="cardDisplay">
+                        <div class="row headrow">
+                            <div class="col-md-4">
+                                <p id="CardHolderName"></p>
+                            </div>
+                            <div class="col-md-4">
+                                <p id="CardHolderDOB"></p>
+                            </div>
+                            <div class="col-md-4">
+                                <p id="CardHolderNumber"></p>
+                            </div>
+                        </div>
+                        <div class="row Middlerow">
+                            <div class="col-md-12">
+                                <p id="company-name"> </p>
+                            </div>
+                            <!-- <div class="col-6"></div> -->
+                        </div>
+                        <div class="row Addressrow">
+                            <div class="col-md-12">
+                                <p id="address-data"> </p>
+                            </div>
+                        </div>
+                        <div class="row lastrow">
+                            <div class="col-md-6">
+                                <p id="email-id"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p id="web-site"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <select name="" id="colorList" onclick="changeColor()">
+                        <option value="Select">Select BG Color</option>
+                        <option value="#860A35">Marron</option>
+                        <option value="#D80032">Red</option>
+                        <option value="#FF6868">light pink</option>
+                        <option value="#000000">Black</option>
+                        <option value="#40A2D8">Cyan</option>
+                        <option value="#864AF9">Purple</option>
+                        <option value="#030637">Nevy Blue</option>
+                        <option value="#304D30">Green</option>
+                        <option value="#A9A9A9">Grey</option>
+                        <option value="#F2F597">Yellow</option>
+                    </select>
+                    <!-- <label for="textColorList">Select Text Color: </label> -->
+                    <select id="textColorList" onclick="changeTextColor()">
+                        <option value="Select">Select Text Color</option>
+                        <option value="#000000">Black</option>
+                        <option value="#ff0000">Red</option>
+                        <option value="#00ff00">Green</option>
+                        <option value="#0000ff">Blue</option>
+                        <option value="#ffffff">White</option>
+
+                        <!-- Add more color options as needed -->
+                    </select>
+                    <button id="btnprin" onclick="">Print..</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+<script>
+    var mob = document.getElementById("mob");
+    mob.addEventListener('keypress', function (e) {
+        var ch = String.fromCharCode(e.which)
+        if (!(/[0-9]/.test(ch) || mob.value.length == 10)) {
+            e.preventDefault();
+            alert('only numbers and 10 Digits Allowed');
+        }
+    });
+    var myDiv = document.getElementById("cardDisplay");
+    var colorList = document.getElementById("colorList");
+
+    function changeColor() {
+        var selectedColor = colorList.value;
+        myDiv.style.backgroundColor = selectedColor;
+    }
+    var textColorList = document.getElementById("textColorList");
+    var myText = document.getElementById("cardDisplay");
+    function changeTextColor() {
+        var selectedTextColor = textColorList.value;
+        myText.style.color = selectedTextColor;
+    }
+
+</script>
+
+
+</html>
